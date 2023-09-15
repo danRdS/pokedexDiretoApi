@@ -168,6 +168,7 @@ function mudarValorBotaoPesquisa(inputPesquisaPokemon){
         localStorage.indicadorBtnParametroPesquisa = 'A';
         btnParametroPesquisa.innerText = 'A';
         btnParametroPesquisa.style.textDecoration = 'underline';
+        btnParametroPesquisa.setAttribute('translate', 'no');
         inputPesquisaPokemon.setAttribute('type', 'text');
         inputPesquisaPokemon.setAttribute('onkeypress', "if (isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;")
     } else {
