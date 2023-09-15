@@ -1,0 +1,295 @@
+body{
+    min-height: 100vh;
+}
+
+header{
+    min-height: 30vh;
+    position: relative;
+}
+
+header::before{
+    content: '';
+    display: block;
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-image: url(../../../assets/images/pokeball.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    filter: invert(1) opacity(.18);
+}
+
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    position: relative;
+}
+
+.lista li{
+    width: 50%;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.lista li:first-child{
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btnVoltarHome{
+    all: unset;
+    cursor: pointer;
+}
+
+.btnVoltarHome i{
+    font-size: 1.5rem;
+}
+
+.lista li:nth-child(2){
+    justify-content: end;
+    align-items: center;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.lista li:last-child{
+    flex-grow: 1;
+    position: relative;
+    top: 3.5rem;
+    padding: 5rem;
+}
+
+.lista li img{
+    width: 70%;
+    min-width: 190px;
+    max-width: 250px;
+    position: absolute;
+    bottom: -2rem;
+}
+
+.secaoBtnAnteriorProximo{
+    position: absolute;
+    bottom: 35%;
+    left: .8rem;
+    right: .8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnAnteriorProximo{
+    all: unset;
+    cursor: pointer;
+}
+
+/* CORPO */
+.container{
+    --cor: #fff;
+    --corSecundaria: #fff;
+    background-color: #fff;
+    color: #212121;
+    margin: 0 .3rem .3rem;
+    min-height: calc(100vh - 32vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem;
+    gap: 1rem;
+    border-radius: .5rem;
+    box-shadow: inset 0 2px 4px #b0b0b0;
+}
+
+.secaoTipo{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.secaoTipo .tipo{
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 500;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    text-transform: capitalize;
+    letter-spacing: .2px;
+}
+
+.about{
+    padding: 0 1rem;
+}
+
+h3{
+    font-size: 1rem;
+    text-align: center;
+    color: var(--cor);
+    margin-bottom: 1rem;
+}
+
+.listaAbout{
+    display: flex;
+    justify-content: space-around;
+}
+
+.infoAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem;
+}
+
+.campoParaValoresDoAbout{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .75rem;
+}
+
+.campoParaValoresDoAbout .imagemPesoEAltura{
+    width: 1.2rem;
+}
+
+.campoParaValoresDoAbout img[alt = 'imagem de régua'] {
+    transform: rotate(90deg);
+}
+
+.nomeInfo{
+    font-weight: 300;
+    font-size: .7rem;
+    color: #666666;
+}
+
+.nomeAtaque{
+    display: block;
+    text-transform: capitalize;
+    font-size: .75rem;
+}
+
+.descricao{
+    font-size: .75rem;
+    text-align: justify;
+    padding: 0 .5rem;
+}
+
+/* TABELA DE STATUS */
+.tabelaStatus{
+    width: 100%;
+    padding: 1rem .5rem;
+    font-size: .75rem;
+}
+
+.tituloTabela{
+    padding-bottom: .5rem;
+    color: var(--cor);
+    font-size: 1rem;
+    letter-spacing: .8px;
+}
+
+.linhasCorpoTabela{
+    display: flex;
+    justify-content: space-between;
+}
+
+td{
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+}
+
+.nomeAtributo{
+    padding-right: 1rem;
+    border-right: 3px solid #eaeaea;
+    font-weight: 700;
+    color: var(--cor);
+    justify-content: flex-end;
+}
+
+.colunaBarraDeValor{
+    margin-left: 1rem;
+    width: 500%;
+    display: flex;
+    align-items: center;
+}
+
+.barraDeValorDoAtributo{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    display: block;
+}
+
+.barraDeValorDoAtributo::-webkit-progress-bar, .barraDeValorDoAtributo::-webkit-progress-value{
+    border-radius: 1rem;
+}
+.barraDeValorDoAtributo::-webkit-progress-bar{
+    background-color: var(--corSecundaria);
+}
+
+.barraDeValorDoAtributo::-webkit-progress-value{
+    background-color: var(--cor);
+}
+
+.popupErroRequest{
+    background-color: #000a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.popupErroRequest.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.mensagemDeErro{
+    background-color: #ef0a0a;
+    padding: .5rem;
+    letter-spacing: .3px;
+    border-radius: .4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    width: 250px;
+    max-width: 100%;
+}
+
+.informacaoDeErro{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#recarregar{
+    border: none;
+    color: #eaeaea;
+    background-color: rgb(86, 30, 86);
+    padding: .5rem .3rem;
+    letter-spacing: .5px;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+#recarregar:hover{
+    background-color: rgb(62, 7, 62);
+}

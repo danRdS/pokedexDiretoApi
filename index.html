@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="app/assets/images/pokebola_frente.gif" type="image/x-icon">
+    <link rel="stylesheet" href="app/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pokédex</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="app/assets/images/pokedexIcon.png" alt="Logo pokebola" class="imgIcon">
+            <h1>Pokédex</h1>
+        </div>
+        <div class="seachBar">
+            <form action="">
+                <input type="number" name="valorDeBusca" id="valorDeBusca" min="0" step="1" onkeyup="search(valorDeBusca, infoSemResultadosBusca, listaPokemonRenderizada)" placeholder="Search" autocomplete="none">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <button type="reset" title="Apagar" id="btnResetPesquisa">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </form>
+            <button class="btnPesquisa" id="btnParametroPesquisa" onclick="mudarFormaPesquisa()">#</button>
+            <button class="campoMenuPesquisa">
+                <h3>Sort by:</h3>
+                <ul class="menuPesquisa">
+                    <li class="opcaoPesquisa">
+                        <input type="radio" name="buscador" id="buscaPorId" checked>
+                        <label for="buscaPorId">Number</label>
+                    </li>
+                    <li class="opcaoPesquisa">
+                        <input type="radio" name="buscador" id="buscaPorNome">
+                        <label for="buscaPorNome">Name</label>
+                    </li>
+                </ul>
+            </button>
+        </div>
+    </header>
+    <div class="backgroundMenuPesquisa"></div>
+    <main class="container">
+        <ul class="lista"></ul>
+        <span class="infoSemResultadosBusca"></span>
+    </main>
+    <div id="loader" class="loader"></div>
+    <div class="popup">
+        <section class="mensagemDeErro">
+            <span class="informacaoDeErro"></span>
+            <button id="recarregar" onclick="recarregarPagina()">Recarregar</button>
+        </section>        
+    </div>
+    <button id="toTop" onclick="topFuntion()">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <script src="app/assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/pokebola_frente.gif" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/resetCss.css">
+    <link rel="stylesheet" href="assestsSecondView/css/styleInfosPokemon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title translate="no">Infos Pokémon</title>
+</head>
+<body>
+    <header>
+        <ul class="lista"></ul>
+    </header>
+    <main class="container">
+        <div class="secaoTipo"></div>
+        <section class="about">
+            <h3 id="about">About</h3>
+            <ul class="listaAbout">
+                <li class="infoAbout">
+                    <article class="campoParaValoresDoAbout">
+                        <img class="imagemPesoEAltura" src="../assets/images/weight.png" alt="imagem de balança">
+                        <span id="peso"></span>
+                    </article>
+                    <span class="nomeInfo">Weigth</span>
+                </li>
+                <img src="../assets/images/Divider.png" alt="divisor" class="divider">
+                <li class="infoAbout">
+                    <article class="campoParaValoresDoAbout">
+                        <img class="imagemPesoEAltura" src="../assets/images/straighten.png" alt="imagem de régua">
+                        <span id="altura"></span>
+                    </article>
+                    <span class="nomeInfo">Height</span>
+                </li>
+                <img src="../assets/images/Divider.png" alt="divisor" class="divider">
+                <li class="infoAbout">
+                    <span class="ataques"></span>
+                    <span class="nomeInfo">Moves</span>
+                </li>
+            </ul>
+        </section>
+        <article class="descricao"></article>
+        <section class="secaoTabelaDeStatus">
+            <table border="0" class="tabelaStatus">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="tituloTabela">Base Stats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="linhasCorpoTabela">
+                        <td class="nomeAtributo">HP</td>
+                        <td class="valorAtributo"></td>
+                        <td class="colunaBarraDeValor">
+                            <progress max="230" class="barraDeValorDoAtributo"></progress>
+                        </td>
+                    </tr>
+                    <tr class="linhasCorpoTabela">
+                        <td class="nomeAtributo">ATK</td>
+                        <td class="valorAtributo"></td>
+                        <td class="colunaBarraDeValor">
+                            <progress max="230" class="barraDeValorDoAtributo"></progress>
+                        </td>
+                    </tr>
+                    <tr class="linhasCorpoTabela">
+                        <td class="nomeAtributo">DEF</td>
+                        <td class="valorAtributo"></td>
+                        <td class="colunaBarraDeValor">
+                            <progress max="230" class="barraDeValorDoAtributo"></progress>
+                        </td>
+                    </tr>
+                    <tr class="linhasCorpoTabela">
+                        <td class="nomeAtributo">SATK</td>
+                        <td class="valorAtributo"></td>
+                        <td class="colunaBarraDeValor">
+                            <progress max="230" class="barraDeValorDoAtributo"></progress>
+                        </td>
+                    </tr>
+                    <tr class="linhasCorpoTabela">
+                        <td class="nomeAtributo">SDEF</td>
+                        <td class="valorAtributo"></td>
+                        <td class="colunaBarraDeValor">
+                            <progress max="230" class="barraDeValorDoAtributo"></progress>
+                        </td>
+                    </tr>
+                    <tr class="linhasCorpoTabela">
+                        <td class="nomeAtributo">SPD</td>
+                        <td class="valorAtributo"></td>
+                        <td class="colunaBarraDeValor">
+                            <progress max="230" class="barraDeValorDoAtributo"></progress>
+                        </td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="popupErroRequest">
+        <section class="mensagemDeErro">
+            <span class="informacaoDeErro"></span>
+            <button id="recarregar" onclick="recarregarPagina()">Recarregar</button>
+        </section>        
+    </div>
+    <script src="assestsSecondView/js/scriptInfosPokemon.js"></script>
+</body>
+</html>

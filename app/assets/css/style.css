@@ -1,0 +1,387 @@
+@import url(resetCss.css);
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    padding: .5rem 1rem 1.5rem;
+    background-color: transparent;
+    background-color: #dc0a2d;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: default;
+    color: #fff;
+}
+
+.imgIcon{
+    filter: brightness(3);
+    width: 70px;
+    padding: 0;
+    margin-left: -20px;
+    margin-right: -6px;
+}
+
+.seachBar, form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+form{
+    width: 82%;
+    position: relative;
+}
+
+form i:nth-child(2){
+    color: red;
+    position: absolute;
+    left: 1rem;
+    pointer-events: none;
+}
+
+#valorDeBusca{
+    border: none;
+    outline: none;
+    padding: .8rem 2.3rem .8rem 2.5rem;
+    border-radius: 2rem;
+    width: 80%;
+    width: 100%;
+    box-shadow: inset 0 2px 3px grey;
+}
+
+#valorDeBusca::placeholder{
+    padding-left: .2rem;
+    letter-spacing: .5px;
+}
+
+form button[type=reset]{
+    all: unset;
+    color: red;
+    position: absolute;
+    right: 1rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+    cursor: pointer;
+    display: none;
+}
+
+#valorDeBusca:not(:placeholder-shown) ~ button[type=reset]{
+    display: block;
+}
+
+.btnPesquisa{
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 1.3rem;
+    box-shadow: inset 0 2px 3px grey;
+    z-index: 3;
+}
+
+.backgroundMenuPesquisa{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000;
+    display: none;
+    z-index: 2;
+}
+
+.backgroundMenuPesquisa.visible{
+    display: block;
+}
+
+.campoMenuPesquisa{
+    background-color: #fff;
+    padding: .3rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 5px grey,
+    inset 0 2px 3px #80808099;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.campoMenuPesquisa.visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menuPesquisa{
+    padding: 0 .5rem;
+}
+
+.opcaoPesquisa{
+    display: flex;
+    align-items: center;
+    color: #181818;
+    letter-spacing: .3px;
+    margin: .8rem 1.2rem;
+}
+
+.opcaoPesquisa input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    aspect-ratio: 1;
+    border: 2px solid red;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.opcaoPesquisa input:checked{
+    box-shadow: inset 0 0 0 2.5px #fff;
+    background-color: red;
+}
+
+header input[type=number]{
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+header input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.opcaoPesquisa label{
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    padding-left: .5rem;
+}
+
+.container{
+    background-color: #fff;
+    margin: .4rem;
+    border-radius: .6rem;
+    padding: 1.5rem .5rem;
+    min-height: calc(100vh - 22vh);
+    box-shadow: inset 0 3px 5px #b0b0b0;
+    position: relative;
+}
+
+.loader {
+    width: 45px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #8739f9;
+    animation: pulsante 1s linear infinite;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  
+  @keyframes pulsante {
+    0% { box-shadow: #8739f9 0 0 0 0; }
+    100% { box-shadow: #8739f900 0 0 0 16px; }
+  }
+
+.container ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.lista li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.optionPokemon{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    color: #181818;
+    position: relative;
+    font-size: .8rem;
+    box-shadow: 0 0 8px grey;
+    box-shadow: 0 2px 8px 2px #afaeae;
+    position: relative;
+    z-index: 1;
+}
+
+.optionPokemon::before{
+    content: '';
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 60%;
+    z-index: -1;
+    background-color: rgb(239, 239, 239);
+    border-radius: inherit;
+}
+
+.spanId{
+    align-self: flex-end;
+    color: #727272;
+    font-size: .6rem;
+    letter-spacing: .3px;
+}
+
+.imgPokemon{
+    width: 70%;
+}
+
+.nomePokemon{
+    letter-spacing: .2px;
+    text-transform: capitalize;
+}
+
+.infoSemResultadosBusca{
+    padding-left: .5rem;
+    color: #181818;
+    display: none;
+    word-break: break-all;
+}
+
+#badRequest{
+    color: #181818;
+}
+
+.popup{
+    background-color: #000a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 4;
+    transition: all .2s ease-in-out;
+}
+
+.popup.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.mensagemDeErro{
+    background-color: #ef0a0a;
+    padding: .5rem;
+    letter-spacing: .3px;
+    border-radius: .4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    width: 250px;
+    max-width: 100%;
+}
+
+.informacaoDeErro{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#recarregar{
+    border: none;
+    color: #eaeaea;
+    background-color: rgb(86, 30, 86);
+    padding: .5rem .3rem;
+    letter-spacing: .5px;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+#recarregar:hover{
+    background-color: rgb(62, 7, 62);
+}
+
+#toTop{
+    border: none;
+    background-color: #b9b9b9;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    cursor: pointer;
+    z-index: 1;
+    animation-name: regresso;
+    animation-duration: .3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+#toTop i{
+    font-size: 22px;
+    color: #141414;
+}
+
+#toTop.showToTop{
+    opacity: 1;
+    visibility: visible;
+    animation-name: salto;
+    animation-duration: .3s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes salto {
+    from{transform: scale(0);}
+    to{transform:  scale(1);}
+}
+
+@keyframes regresso {
+    0%{transform:  scale(1);}
+    25%{transform: scale(1.2);}
+    100%{transform: scale(0);}
+}
+
+@media screen and (min-width: 420px) {
+    .lista li{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .optionPokemon{
+        width: auto;
+        height: auto;
+    }
+
+    .optionPokemon::before{
+        border-radius: 1rem 1rem .5rem .5rem;
+    }
+}

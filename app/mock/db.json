@@ -1,0 +1,49 @@
+{
+    "pokemons": [
+        {
+            "id": "001",
+            "nome": "bulbasaur",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+        },
+        {
+            "id": "004",
+            "nome": "charmander",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+        },
+        {
+            "id": "007",
+            "nome": "squirtle",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+        },
+        {
+            "id": "012",
+            "nome": "butterfree",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png"
+        },
+        {
+            "id": "025",
+            "nome": "pikachu",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+            "id": "092",
+            "nome": "gastly",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png"
+        },
+        {
+            "id": "132",
+            "nome": "ditto",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+        },
+        {
+            "id": "151",
+            "nome": "mew",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png"
+        },
+        {
+            "id": "304",
+            "nome": "aron",
+            "urlImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/304.png"
+        }
+    ]
+}
